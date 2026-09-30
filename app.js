@@ -91,6 +91,7 @@
 
 	// --- ROM choice ------------------------------------------------------------------------
 	async function onFile(file) {
+		await started; // a ROM dropped before the page finished loading build.json
 		if (!file) {
 			return;
 		}
@@ -324,5 +325,5 @@
 		getWorker().postMessage({ type: 'boot' }); // loads Python while the player looks for the ROM
 	}
 
-	init().catch((e) => fail(`Erreur au démarrage : ${e.message}`));
+	const started = init().catch((e) => fail(`Erreur au démarrage : ${e.message}`));
 })();
