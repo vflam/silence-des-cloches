@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Silence des Cloches</title>
+<link rel="stylesheet" href="page.css">
+
+</head>
+<body>
+<main id="home">
+	<h1>Le Silence des Cloches</h1>
+	<p class="lead">Une nouvelle aventure dans l’univers de <i>A Link to the Past</i>.</p>
+	<p>Ce jeu utilise les graphismes et sons de votre propre cartouche : ajoutez votre ROM.
+		Elle reste dans votre navigateur : rien n’est envoyé sur Internet.</p>
+
+	<section id="pick">
+		<label id="drop" for="file">
+			<span class="big">Déposez votre ROM ici</span>
+			<span>ou <u>choisissez un fichier</u> (.sfc, .smc ou .zip)</span>
+			<input id="file" type="file" accept=".sfc,.smc,.zip,application/zip">
+		</label>
+	</section>
+
+	<p id="check" role="status" aria-live="polite"></p>
+
+	<section id="work" hidden>
+		<p id="work-label"></p>
+		<div class="bar"><div id="work-bar"></div></div>
+		<p id="work-detail" class="small"></p>
+	</section>
+
+	<button id="start" type="button" hidden>Commencer</button>
+	<p id="error" class="error" hidden></p>
+
+	<footer class="small">
+		<p>Première visite : l’extraction des graphismes et des sons prend quelques minutes, une
+			seule fois ; ils sont ensuite gardés dans ce navigateur.
+			<a id="reset" href="#" hidden>Changer de ROM / effacer les données</a></p>
+		<p>Version attendue : <span id="versions">…</span>.</p>
+		<p>Projet de fan non officiel, gratuit, sans lien avec Nintendo. Ce site ne contient
+			aucun graphisme, son ni donnée du jeu d’origine : tout vient de la ROM que vous
+			fournissez, copie de votre propre cartouche. <i>The Legend of Zelda</i> et
+			<i>A Link to the Past</i> sont des marques de Nintendo.</p>
+	</footer>
+</main>
+
+<canvas id="canvas" hidden>Votre navigateur ne sait pas afficher ce jeu.</canvas>
+<noscript>Ce jeu a besoin de JavaScript.</noscript>
+
+<script src="index.js"></script>
+<script src="store.js"></script>
+<script>
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":428416,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_THREADS_ENABLED = false;
+</script>
+<script src="app.js"></script>
+</body>
+</html>
+

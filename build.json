@@ -1,0 +1,44 @@
+{
+ "built": "2026-09-30 17:52:37",
+ "godot": "4.7.2.stable",
+ "extractor_version": 1,
+ "extract_hash": "355cfd9d3e174b04",
+ "sources": "extract/sources-355cfd9d3e174b04.zip",
+ "tools_sha256": {
+  "room_render": "372bc1f62a1cdb65afd38780d0f918a196b346e67a3ba452705e1a490a85fbd4",
+  "spc_render": "62b319663f17ca93571f425e0b3b25ea5af50e32db9d88652d33a4e51bc5217e"
+ },
+ "engine_sha256": [
+  "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
+  "3a5f265e788646513c32494fc0faead64c6b7f92ef005bf475da0c622bd481f4",
+  "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+  "b0a5d443e78f58717adac780bac91c1431bfa3b801c41f4707d507fb5ad2e47f",
+  "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+  "c72e9a688cd06978be343fd8481130e89dd81439267e1cfd8aef8343ea9f4139",
+  "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+ ],
+ "custom_pack": "custom.pck",
+ "pyodide_url": "https://cdn.jsdelivr.net/pyodide/v314.0.7/full/",
+ "rom_versions": [
+  {
+   "id": "jp10",
+   "name": "Zelda no Densetsu: Kamigami no Triforce (Japon) v1.0",
+   "sha1": "e7e852f0159ce612e3911164878a9b08b3cb9060"
+  },
+  {
+   "id": "fr",
+   "name": "La Légende de Zelda: A Link to the Past (France)",
+   "sha1": "229364a1b92a05167cd38609b1aa98f7041987cc"
+  },
+  {
+   "id": "jp12",
+   "name": "Zelda no Densetsu: Kamigami no Triforce (Japon) v1.2",
+   "sha1": "6d9fa9006c160a0c81db913bcd0ea3e7cc249bc9"
+  },
+  {
+   "id": "us",
+   "name": "The Legend of Zelda: A Link to the Past (États-Unis)",
+   "sha1": "6d4f10a8b10e10dbe624cb23cf03b88bb8252973"
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+:root {
+	--bg: #16181d;
+	--card: #20242c;
+	--text: #e8e6e1;
+	--muted: #a7abb4;
+	--accent: #d9a441;
+	--accent-text: #1b1406;
+	--ok: #7cc47f;
+	--bad: #e47a6c;
+	--line: #3a404c;
+	color-scheme: dark;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: var(--bg);
+	color: var(--text);
+	font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+#home {
+	max-width: 38rem;
+	margin: 3rem auto;
+	padding: 2rem 1.5rem;
+	background: var(--card);
+	border-radius: 12px;
+}
+
+@media (max-width: 40rem) {
+	#home {
+		margin: 0;
+		border-radius: 0;
+		padding: 1.5rem 16px;
+	}
+}
+
+h1 {
+	margin: 0 0 .25rem;
+	font-size: 1.9rem;
+	letter-spacing: .02em;
+	color: var(--accent);
+}
+
+.lead {
+	margin-top: 0;
+	color: var(--muted);
+}
+
+#drop {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: .25rem;
+	padding: 1.5rem 1rem;
+	border: 2px dashed var(--line);
+	border-radius: 10px;
+	text-align: center;
+	cursor: pointer;
+	transition: border-color .15s, background .15s;
+}
+
+#drop:hover, #drop.over {
+	border-color: var(--accent);
+	background: rgba(217, 164, 65, .06);
+}
+
+#drop .big {
+	font-size: 1.15rem;
+	font-weight: 600;
+}
+
+#drop input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}
+
+#check {
+	min-height: 1.5em;
+}
+
+#check.ok {
+	color: var(--ok);
+}
+
+#check.bad {
+	color: var(--bad);
+}
+
+#start {
+	display: block;
+	width: 100%;
+	padding: .8rem 1rem;
+	font: inherit;
+	font-size: 1.15rem;
+	font-weight: 700;
+	color: var(--accent-text);
+	background: var(--accent);
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+#start:disabled {
+	opacity: .5;
+	cursor: wait;
+}
+
+#start[hidden], [hidden] {
+	display: none;
+}
+
+.bar {
+	height: 10px;
+	background: var(--line);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.bar > div {
+	height: 100%;
+	width: 0;
+	background: var(--accent);
+	transition: width .3s;
+}
+
+.small {
+	font-size: .88rem;
+	color: var(--muted);
+}
+
+.error {
+	color: var(--bad);
+	white-space: pre-wrap;
+}
+
+footer {
+	margin-top: 1.5rem;
+	border-top: 1px solid var(--line);
+}
+
+a {
+	color: var(--accent);
+}
+
+body.playing {
+	overflow: hidden;
+	background: #000;
+	touch-action: none;
+}
+
+body.playing #home {
+	display: none;
+}
+
+#canvas {
+	display: block;
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#canvas[hidden] {
+	display: none;
+}
+
+#canvas:focus {
+	outline: none;
+}
